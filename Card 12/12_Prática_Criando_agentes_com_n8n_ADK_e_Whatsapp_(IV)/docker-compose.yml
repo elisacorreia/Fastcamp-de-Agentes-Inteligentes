@@ -1,0 +1,9 @@
+version: '3'
+services:
+  waha:
+    image: devlikeapro/waha
+    ports:
+      - 3000:3000
+    environment:
+      - WAHA_WEBHOOK_ENDPOINT=http://host.docker.internal:5678/webhook/waha-receber
+      - WAHA_WEBHOOK_EVENTS=message
